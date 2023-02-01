@@ -1,0 +1,542 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400&family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #444;
+  font-size: 0.9rem;
+}
+.register,
+.register-success {
+  background: no-repeat url(image/register-bg.jpg);
+  background-size: cover;
+}
+.log-in {
+  background: no-repeat url(image/login-bg.jpg);
+  background-size: cover;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.primary-header {
+  height: 100vh;
+  width: 100%;
+  background: no-repeat url(image/header-bg.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+.register .ordinary-header,
+.register-success .ordinary-header,
+.log-in .ordinary-header {
+  background: transparent;
+}
+.ordinary-header {
+  background: #fff;
+  width: 100%;
+  overflow: hidden;
+}
+a {
+  transition: 0.3s;
+  text-decoration: none;
+}
+a:hover {
+  transition: 0.3s;
+}
+img {
+  width: 100%;
+}
+#logo img {
+  width: 10em;
+  float: left;
+  transition: 0.3s;
+  position: relative;
+  z-index: 2;
+}
+#logo img:hover {
+  opacity: 0.85;
+  transition: 0.3s;
+}
+.top-bar {
+  background: #f9a392;
+}
+.login {
+  text-align: right;
+  position: relative;
+  color: #fff;
+  z-index: 2;
+}
+.login a,
+.schedule span {
+  color: #fff;
+  padding: 0.6rem;
+  display: inline-block;
+}
+.ordinary-header .login a:hover {
+  background: #25292f;
+}
+.container {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.header-shadow {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+.register .header-shadow,
+.log-in .header-shadow,
+.register-success .header-shadow {
+  z-index: -1;
+}
+.register #logo img,
+.log-in #logo img,
+.register-success #logo img {
+  margin: 1.1rem 0;
+}
+.ordinary-header .nav {
+  margin: 1.1em 0;
+}
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5em;
+  margin: 0;
+  padding: 1.1rem 0 1rem;
+}
+.nav-list li {
+  list-style: none;
+  position: relative;
+}
+.ordinary-header .nav-list li a {
+  color: #25292f;
+  font-weight: 400;
+}
+.primary-header .nav-list li a {
+  color: #fff;
+  font-weight: 400;
+}
+.nav-list li a {
+  padding: 0 0 2.15rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+.primary-header .nav-list li a:hover,
+.primary-header .login a:hover,
+.out input:hover {
+  transition: 0.3s;
+  color: #cecece;
+}
+.ordinary-header .nav-list li a:hover {
+  color: #f9a392;
+  transition: 0.3s;
+}
+.dropdown-menu {
+  position: absolute;
+  z-index: 3;
+  top: 6em;
+  left: 50%;
+  transform: translateX(-30%);
+  min-width: 12rem;
+  text-align: left;
+  background: #f9a392;
+  padding: 1rem 0;
+  box-shadow: 0 0 0 rgb(0 0 0 / 18%);
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.nav-list li:hover .dropdown-menu {
+  top: 3.65em;
+  transition: 0.7s;
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown-menu li a {
+  padding: 0.8rem 1.5rem;
+  color: #fff !important;
+  display: block;
+  transition: 0.3s;
+}
+.dropdown-menu li a:hover {
+  background: #25292f;
+  color: #fff;
+  transition: 0.3s;
+}
+.header-middle-position {
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  color: #fff;
+  font-family: "Alegreya Sans SC", sans-serif;
+  position: relative;
+  z-index: 2;
+}
+.header-middle-position h2 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin: 2em 0.5em 0.5em;
+}
+.header-middle-position h2 span {
+  font-weight: 600;
+}
+.header-middle-position h3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0.8em 0.5em 2em;
+}
+.header-middle-position a,
+.submit {
+  display: inline-block;
+  border: 2px solid #fff;
+  text-decoration: none;
+  padding: 0.6rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #fff;
+  display: inline-block;
+  letter-spacing: 0.06rem;
+  transition: 0.3s;
+}
+.header-middle-position a:hover,
+.submit:hover {
+  background-color: #f9a392;
+  border-color: transparent;
+  transition: 0.3s;
+}
+main {
+  padding-bottom: 6rem;
+  flex-grow: 1;
+}
+.register main,
+.log-in main,
+.register-success main {
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.center-content {
+  text-align: center;
+}
+.error {
+  text-align: center;
+}
+.error p {
+  display: inline-block;
+  padding: 20px;
+  margin: 0;
+  color: #f00;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.7);
+}
+.greeting {
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 8rem 2rem 1rem;
+}
+.register .greeting,
+.log-in .greeting,
+.register-success .greeting {
+  color: #fff;
+  font-family: "Alegreya Sans SC", sans-serif;
+  margin: 1rem 0;
+}
+.register .greeting span,
+.log-in .greeting span,
+.register-success .greeting span {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.greeting span {
+  color: #f9a392;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0.5rem;
+}
+hr {
+  width: 10rem;
+  margin: 20px auto;
+}
+.birthday h3,
+.personal h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.birthday .congratulation {
+  color: #f9a392;
+}
+.date {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 7rem;
+}
+.hours,
+.minutes,
+.seconds,
+.count {
+  background: #f9a392;
+  padding: 2rem 1rem;
+  margin: 0 0.2rem 1rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-shadow: 3px 3px 0 #444;
+  position: relative;
+}
+.count {
+  display: inline-block;
+}
+.hours::after,
+.minutes::after,
+.seconds::after,
+.count::after {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  color: #f9a392;
+  text-shadow: none;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  font-weight: 300;
+  bottom: -25px;
+  text-transform: uppercase;
+}
+.hours::after {
+  content: "часов";
+}
+.minutes::after {
+  content: "минут";
+}
+.seconds::after {
+  content: "секунд";
+}
+.center-description-p {
+  font-style: italic;
+  width: 60%;
+  margin: 1rem auto 4rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+.personal .center-description-p {
+  margin-bottom: 0;
+}
+.right-description-h3,
+.left-description-h3 {
+  text-align: left;
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.right-description-h3 {
+  margin: 2rem 0 0 2rem;
+}
+.left-description-h3 {
+  margin: 2rem 2rem 0 0;
+}
+.right-description-p {
+  text-align: left;
+  margin: 1rem 0 3rem 2rem;
+}
+.left-description-p {
+  text-align: left;
+  margin: 1rem 2rem 3rem 0;
+}
+.inner-section {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+.inner-section .div-1 {
+  flex: 1;
+}
+.inner-section .div-2 {
+  flex: 2;
+}
+.inner-section div p {
+  font-weight: 300;
+  letter-spacing: 0.04rem;
+}
+.inner-section-h3 {
+  background: #2a2a2a;
+  color: #fff;
+  padding: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  font-weight: 400;
+  margin: 0;
+}
+.benefits-right {
+  padding-left: 2rem;
+}
+.benefits-left {
+  padding-right: 2rem;
+  padding-left: 0;
+}
+.benefits li {
+  list-style: none;
+}
+.benefits li h4 {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.btn-center {
+  display: inline-block;
+  font-size: 1.1rem;
+  padding: 0.6rem 2rem;
+  margin: 2rem auto 0;
+  background: #2a2a2a;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.06rem;
+}
+.btn-center:hover {
+  background: #f9a392;
+}
+.submit {
+  cursor: pointer;
+}
+.out input {
+  display: inline-block;
+  padding: 0.6rem;
+  width: auto;
+  border: none;
+  margin: 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.register form,
+.log-in form {
+  display: inline-block;
+  padding: 1rem 5rem 3rem;
+  margin: 0 auto;
+}
+input {
+  display: block;
+  margin: 15px auto;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  background: transparent;
+  border: solid 2px #fff;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+input:focus-visible {
+  outline: none;
+}
+input:focus-visible::placeholder {
+  opacity: 0;
+}
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+footer {
+  background: #181818;
+  color: #939393;
+}
+.inner-footer {
+  padding: 3rem 0 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.inner-footer h3 {
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-weight: 300;
+}
+.inner-footer a {
+  color: #c5c5c5;
+}
+.inner-footer a:hover {
+  color: #f9a392;
+}
+.about,
+.blog,
+.contact,
+.letter {
+  flex: 1;
+}
+.sub-footer {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 4px solid #f9a392;
+}
+@media (max-width: 1040px) {
+  .inner-footer,
+  .inner-section {
+    flex-direction: column;
+  }
+}
+@media (max-width: 700px) {
+  #logo img {
+    width: 12rem;
+    float: none;
+  }
+  #logo {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .nav-list {
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .nav-list {
+    flex-direction: column;
+  }
+  .nav-list li {
+    text-align: center;
+  }
+  .dropdown-menu {
+    display: none;
+  }
+  .header-middle-position h2 {
+    font-size: 2rem;
+    margin: 1.8em 0.5em 0.5em;
+  }
+  .header-middle-position h3 {
+    font-size: 1.6rem;
+    margin: 0.8em 0.5em 1.6em;
+  }
+}
